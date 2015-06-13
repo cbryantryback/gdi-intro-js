@@ -1,25 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>JavaScript Puzzles | Girl Develop It</title>
-    <link rel="stylesheet" href="classexercises.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript">    
-        // Powers show/hide buttons.
-        $( document ).ready(function() {
-            $("div.codebox").hide();
-        });
-        function showSolution(num) {
-            $("div#example" + num + "Code").toggle();
-        }
-    </script> 
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="reveal/css/theme/gdisunny.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/homework.css">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
+
+    <!--[if lt IE 9]>
+    <script src="reveal/lib/js/html5shiv.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <div id="wrapper">
-        <div id="header">
+    <div id="wrapper" class="reveal">
+        <header id="header">
             <h1>JavaScript Puzzles</h1>
-        </div>
+        </header>
         <div id="sidebar">
             <ul>
                 <li><a href="#class1">Class 1</a></li>
@@ -29,7 +33,7 @@
             </ul>
         </div>
         <div id="main">
-            <p>Welcome! These are some bonus puzzles to accompany the Girl Develop It <a href="http://www.meetup.com/Girl-Develop-It-RDU/events/161864322/">JavaScript for Beginners</a> class. Please take a look at the puzzles, and work on one that looks challenging but not completely overwhelming. You can always reference <a href="http://www.platypoda.com/js-intro/">the slides</a> if you get stuck. Commit to spend at least 20 minutes trying to figure out a problem before you look at the answers. It helps you learn!</p>
+            <p>Welcome! These are some bonus puzzles to accompany the Girl Develop It <a href="https://www.girldevelopit.com/materials/intro-js">JavaScript for Beginners</a> class. Please take a look at the puzzles, and work on one that looks challenging but not completely overwhelming. You can always reference <a href="https://www.girldevelopit.com/materials/intro-js">the slides</a> if you get stuck. Commit to spend at least 20 minutes trying to figure out a problem before you look at the answers. It helps you learn!</p>
             
             <h2 id="class1">Class 1</h2>
             <h3>The Fortune Teller</h3>
@@ -124,10 +128,10 @@ doCrazyStuff(5);
             
             <h4>MixUp</h4>
             <p>Create a function called <code>mixUp</code>. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:</p>
-            <pre>
+            <pre><code>
 mixUp('mix', pod'): 'pox mid'
 mixUp('dog', 'dinner'): 'dig donner'
-            </pre>
+            </code></pre>
            
             <button onclick="showSolution(3)">Show/Hide Solution</button>
             <div class="codebox" id="example3Code">
@@ -141,10 +145,10 @@ function mixUp(string1, string2) {
             
             <h4>FixStart</h4>
             <p>Create a function called <code>fixStart</code>. It should take a single argument, a string, and return a version where all occurrences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:</p>
-            <pre>
+            <pre><code>
 fixStart('babble'): 'ba**le'
 fixStart('turtle'): 'tur*le'
-            </pre>
+            </code></pre>
             
             <button onclick="showSolution(4)">Show/Hide Solution</button>
             <div class="codebox" id="example4Code">
@@ -190,10 +194,10 @@ console.log (greaterNum(5, 'dog'));
 
             <h3>Pluralize</h3>
             <p>Write a function <code>pluralize</code> that takes in two arguments, a number and a word, and returns the plural. For example:</p>
-            <pre>
+            <pre><code>
 pluralize(5, 'cat'): '5 cats'
 pluralize(7, 'turtle'): '7 cats'
-            </pre>
+            </code></pre>
             <p>Bonus: Make it handle a few collective nouns like "sheep" and "geese".</p>
 
            
@@ -391,9 +395,9 @@ document.body.appendChild(bookList);
             
             <h3>Challenge Question: The Counter</h3>
             <p>Write a function that takes a certain type of tag and counts the number of elements with that tag. The function should return "There a X tags of type y on the page.For example:</p>
-            <pre>
+            <pre><code>
 countTags('p'): 'There are 3 tags of type p on the page'
-            </pre>
+            </code></pre>
 
             <button onclick="showSolution(12)">Show/Hide Solution</button>
             <div class="codebox" id="example12Code">
@@ -409,23 +413,26 @@ function countTags (tagType) {
             <p>Coming Soon!</p>
           
         </div>
-        <div id="footer">
-            <p>Puzzle and code by Sylvia Richardson and Pamela Fox. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
-        </div>
+        <footer id="footer">
+            <p>Puzzles and code by Sylvia Richardson, Pamela Fox, and Catherine Farman. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+        </footer>
     </div>
 
-<script type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="reveal/plugin/highlight/highlight.js"></script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39435329-1']);
-  _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
+        var hljs = hljs || {};
+        hljs.initHighlightingOnLoad();
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+        // Powers show/hide buttons.
+        $( document ).ready(function() {
+            $("div.codebox").hide();
+        });
+        function showSolution(num) {
+            $("div#example" + num + "Code").toggle();
+        }
+    </script>
 </body>
 </html>
