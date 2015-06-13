@@ -1,0 +1,20 @@
+.reveal {
+  font-size: 16px;}
+
+#wrapper {
+  max-width: 1120px;
+  margin: 0 auto;}
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 10px 0 30px;
+  cursor: pointer;
+  overflow: visible;
+  padding: 10px;
+  background: #f3787e;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  -webkit-appearance: none;
+  outline: none;}
