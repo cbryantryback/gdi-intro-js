@@ -216,6 +216,18 @@ document.write('Hello World!');
 				</code></pre>
 			</section>
             <section>
+                <h3>JavaScript "Hoists" Variables</h3>
+                <p>JavaScript will technically let you use a variable before it's declared. This is because JavaScript's default behavior is to move all variable declarations that aren't initialized to the top. Beginners and experienced coders alike can get tripped up by this behavior.</p>
+                <pre><code>
+&lt;script&gt;
+    // This code works but is harder to understand.
+    numberOfKittens = 5;
+    console.log (numberOfKittens);
+    var numberOfKittens;
+&lt;/script&gt;
+                </code></pre>
+            </section>
+            <section>
 				<h3>Let's Develop It</h3>
                 <p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p> 
 			</section>
