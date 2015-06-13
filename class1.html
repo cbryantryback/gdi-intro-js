@@ -73,15 +73,15 @@
             <section>
                 <h3>What is JavaScript?</h3>
                 <ul>
-                    <li>JavaScript is standardized by the "ECMAScript" specifications.</li>
-                    <li>JavaScript is a client-side processing language. A browser reads the code and runs it directly.</li>
+                    <li>JavaScript is standardized by the "ECMAScript" (sometimes abbreviated as ES) specifications.</li>
+                    <li>JavaScript is traditionally a client-side processing language. A browser reads the code and runs it directly.</li>
                     <li>JavaScript interfaces with HTML and CSS.</li>
                     <li>With JavaScript, you can write code once and use it everywhere. Remember, you want DRY code (Don't Repeat Yourself).</li>
                     <li>JavaScript lets you build dynamic webpages that respond to input from users.</li>
                 </ul>
             </section>
             <section>
-                <h3>JavaScript is a client-side language</h3>
+                <h3>JavaScript is a client-side language... usually.</h3>
                 <img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
 				<p class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
             </section>
@@ -142,6 +142,7 @@
     console.log('Hello World!'); //Or mark short comments like this
 &lt;/script&gt;
 				</code></pre>
+                <p>Comment your code often to remind yourself (or others) what it does, where an example came from, or to note issues or questions for later.</p>
             </section>
             <section>
                 <h3>Getting results onto your screen</h3>
@@ -214,6 +215,18 @@ document.write('Hello World!');
 &lt;/script&gt;
 				</code></pre>
 			</section>
+            <section>
+                <h3>JavaScript "Hoists" Variables</h3>
+                <p>JavaScript will technically let you use a variable before it's declared. This is because JavaScript's default behavior is to move all variable declarations that aren't initialized to the top. Beginners and experienced coders alike can get tripped up by this behavior.</p>
+                <pre><code>
+&lt;script&gt;
+    // This code works but is harder to understand.
+    numberOfKittens = 5;
+    console.log (numberOfKittens);
+    var numberOfKittens;
+&lt;/script&gt;
+                </code></pre>
+            </section>
             <section>
 				<h3>Let's Develop It</h3>
                 <p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p> 
@@ -294,7 +307,7 @@ document.write('Hello World!');
       
             <section>
                 <h3>Strings</h3>
-                <p>Variable can be strings, groups of characters. You put your string in quotes.</p>
+                <p>Variables can be "strings", which are simply groups of characters. You put your string in quotes.</p>
                 <pre><code>
 &lt;script&gt;
     var kittensName = 'Fluffy';
